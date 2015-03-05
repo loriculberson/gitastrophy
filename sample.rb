@@ -1,5 +1,8 @@
 class Sample
   def self.do_stuff(objects)
-    objects.map(&:clean)
+    ary = Array.new
+    objects.each do |object|
+      ary << object.clean
+    end
   end
 end
